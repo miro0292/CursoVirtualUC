@@ -29,8 +29,8 @@ body {
 }
 
 #logo {
-    width: 30%;
-    font-size: 30px;
+    width: 25%;
+    font-size: 25px;
     float: left;
     margin-top: 35px;
 }
@@ -55,9 +55,9 @@ body {
 }
 
 #brand {
-    display: block;
+    display: flex;
     margin: 0px;
-    float: left;
+    float: none;
 }
 
 #menu{
@@ -386,7 +386,7 @@ textarea{
 
 @media (max-width: 881px){
     #logo{
-        width: 265px;
+        width: 100px;
     }
 
     #menu{
