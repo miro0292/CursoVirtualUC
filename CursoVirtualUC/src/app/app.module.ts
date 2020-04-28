@@ -8,7 +8,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { BodyhomeComponent } from './components/bodyhome/bodyhome.component';
 import { IniciosesionComponent } from './components/iniciosesion/iniciosesion.component';
 import { PreinscripcionComponent } from './components/preinscripcion/preinscripcion.component';
 import { HomeComponent } from './components/home/home.component';
@@ -23,7 +22,6 @@ import { ErrorComponent } from './components/error/error.component';
     SliderComponent,
     SidebarComponent,
     FooterComponent,
-    BodyhomeComponent,
     IniciosesionComponent,
     PreinscripcionComponent,
     HomeComponent,

@@ -6,7 +6,8 @@ import { IniciosesionComponent } from './components/iniciosesion/iniciosesion.co
 import { PreinscripcionComponent } from './components/preinscripcion/preinscripcion.component';
 import { PostinscripcionComponent } from './components/postinscripcion/postinscripcion.component';
 import { CursoComponent } from './components/curso/curso.component';
-
+import { error } from '@angular/compiler/src/util';
+import { ErrorComponent } from './components/error/error.component';
 
 const appRoutes: Routes=[
     {path:'',component:HomeComponent},
@@ -14,7 +15,8 @@ const appRoutes: Routes=[
     {path:'InicioSesion',component:IniciosesionComponent},
     {path:'PreInscripcion',component:PreinscripcionComponent},
     {path:'PostInscripcion',component:PostinscripcionComponent},
-    {path:'Curso',component:CursoComponent}
+    {path:'Curso',component:CursoComponent},
+    {path:'**',component:ErrorComponent}
 ];
 
 export const appRoutingProvider: any[] = [];
