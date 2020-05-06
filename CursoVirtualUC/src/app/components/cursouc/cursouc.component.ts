@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router';
 @Component({
-  selector: 'app-curso',
-  templateUrl: './curso.component.html',
-  styleUrls: ['./curso.component.css']
+  selector: 'app-cursouc',
+  templateUrl: './cursouc.component.html',
+  styleUrls: ['./cursouc.component.css']
 })
-export class CursoComponent implements OnInit {
-
+export class CursoucComponent implements OnInit {
   public nombrecurso: string;
   public descurso: string;
   constructor(

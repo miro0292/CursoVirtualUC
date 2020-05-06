@@ -13,7 +13,9 @@ var UsuarioSchema = schema({
     fechamodificacion : {type: Date,default:Date.now},
     tel: Number,
     comprobantePago: String,
-    rol: String
+    rol: String,
+    examen: String,
+    calificacion: String
 });
 
 module.exports = mongoose.model('Usuario',UsuarioSchema);

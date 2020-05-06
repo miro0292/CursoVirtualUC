@@ -6,8 +6,10 @@ import { IniciosesionComponent } from './components/iniciosesion/iniciosesion.co
 import { PreinscripcionComponent } from './components/preinscripcion/preinscripcion.component';
 import { PostinscripcionComponent } from './components/postinscripcion/postinscripcion.component';
 import { CursoComponent } from './components/curso/curso.component';
-import { error } from '@angular/compiler/src/util';
+import { CursoucComponent } from './components/cursouc/cursouc.component';
 import { ErrorComponent } from './components/error/error.component';
+import { SuccessComponent } from './components/success/success.component';
+
 
 const appRoutes: Routes=[
     {path:'',component:HomeComponent},
@@ -15,7 +17,9 @@ const appRoutes: Routes=[
     {path:'InicioSesion',component:IniciosesionComponent},
     {path:'PreInscripcion',component:PreinscripcionComponent},
     {path:'PostInscripcion',component:PostinscripcionComponent},
-    {path:'Curso',component:CursoComponent},
+    {path:'Curso/:nomcurso',component:CursoComponent},
+    {path:'Cursouc/:nomcurso',component:CursoComponent},
+    {path:'Success',component:SuccessComponent},
     {path:'**',component:ErrorComponent}
 ];
 

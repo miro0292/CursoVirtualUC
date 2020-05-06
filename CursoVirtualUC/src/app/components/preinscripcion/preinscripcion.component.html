@@ -3,28 +3,33 @@
     <section align="center">
 
         <h1 class="subheader">Preinscripcion a Curso</h1>
-
-        <form class="mid-form" >
+        <form class="mid-form" #userpreform="ngForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" />
+                <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="user.nombre" required pattern="[a-zA-Z]+" />
             </div>
-
+            <small *ngIf="!nombre.valid && nombre.touched">
+                Nombre no es valido
+            </small>
             <div class="form-group">
                 <label for="correo">correo</label>
-                <input type="text" name="correo" />
+                <input type="email" name="correo" #correo="ngModel" [(ngModel)]="user.correo" required placeholder="Ex. pat@example.com"/>
             </div>
+            <small *ngIf="!correo.valid && correo.touched">
+                correo no es valido
+            </small>
             <div class="form-group">
-                <label for="telefono">Telefono</label>
-                <input type="text" name="telefono" />
+                <label for="tel">Telefono</label>
+                <input type="number" name="tel" #tel="ngModel" [(ngModel)]="user.tel" required  minlength="10" maxlength="10" />
             </div>
+            <small *ngIf="!tel.valid && tel.touched">
+                Telefono no es valido
+            </small>
             <div class="clearfix"></div>
-            <br/>
-            <a href="confinscrpcion.html"><input type="submit" value="Preinscripcion" class="btn btn-success" /></a>
-
+            <br />
+            <a><input type="submit" value="Preinscripcion" class="btn btn-success" [disabled]="userpreform.invalid"/></a>
         </form>
     </section>
     <div class="clearfix"></div>
 </div>
-
 <app-footer></app-footer>

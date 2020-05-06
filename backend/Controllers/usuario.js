@@ -57,6 +57,8 @@ var controller = {
                 usuario.contrasena = psss;
                 usuario.rol = params.rol;
                 usuario.comprobantePago = "0";
+                usuario.examen="0";
+                usuario.calificacion="0";
                 Usuario.find({ correo: params.correo }, (err, usuariofind) => {
                     if (usuariofind == undefined || usuariofind.length == 0) {
                         usuario.save((err, usuariosave) => {
