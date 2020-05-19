@@ -14,6 +14,7 @@ export class PreinscripcionComponent implements OnInit {
 
   public user: User;
   public status: string;
+  public template_params: String;
   constructor(
     private _userService: UserService,
     private _route: ActivatedRoute,
@@ -27,30 +28,34 @@ export class PreinscripcionComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.user.nombre);
-    console.log(this.user.correo);
-    console.log(this.user.tel);
-
     this._userService.postUser(this.user).subscribe(
       response => {
         if (response.status == 'success') {
+                    
           this.status = 'success';
           this.user = response.usuario;
-          console.log(this.user);
-          //alert('Su Ususario es: '+ this.user.usuario+' Su contraseña es :'+this.user.contrasena+' Se le enviara un correo electronico con esta Informacion Gracias por inscribirse a este examen');
-          confirm("mensaje de confirmación");
+          alert('Su Ususario es: '+ this.user.usuario+' Su contraseña es :'+this.user.contrasena+' Se le enviara un correo electronico con esta Informacion Gracias por inscribirse a este examen');
 
+          var userID = 'user_SQ1honNmoXki6FMiXeYrE';
+          var service_id = 'gmail_mike';
+          var template_id ='template_iS76X8sD';
+          var template_params = {
+            "reply_to": this.user.correo,
+            "name": this.user.nombre,
+            "ususariooo": this.user.usuario,
+            "contrasenaa": this.user.contrasena
+         }  
+         
 
-
-            //.then((result: EmailJSResponseStatus) => {
-            //  console.log(result.text);
-            //}, (error) => {
-            //  console.log(error.text);
-            //});
-
-
-
+          emailjs.send(service_id, template_id,template_params, userID)
+            .then((result: EmailJSResponseStatus) => {
+              console.log(result.text);
+            }, (error) => {
+              console.log(error.text);
+            });
           this._router.navigate(['/Success']);
+        }if (response.status == 'error') {
+          alert(response.descripcion);
         }
       },
       error => {
