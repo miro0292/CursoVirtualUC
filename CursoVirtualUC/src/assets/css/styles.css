@@ -253,6 +253,15 @@ textarea{
     margin-bottom: 5px;
     transition: 300ms all;
 }
+input[type="password"],
+textarea{
+    width: 100%;
+    min-height: 30px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin-bottom: 5px;
+    transition: 300ms all;
+}
 input[type="text"],
 textarea{
     width: 100%;

@@ -1,1 +1,118 @@
-<p>postinscripcion works!</p>
+<app-header></app-header>
+<div class="center">
+    <section id="content">
+
+        <article class="article-item article-detail">
+            <div class="image-wrap">
+                <img src="assets/images/Auditoria de Sistemas.jpg" alt="Auditoria informática" />
+            </div>
+            <h1 class="subheader">Bienvenido {{nombrecurso}} a tu examen </h1>
+            <span class="date">
+                Hace 4 dias
+            </span>
+            <td style="width: 50%;vertical-align: top;">
+                <p class="resultado_general"> Nombre del programa:
+                    <strong>
+                        <br>
+                        <span>conceptualización Maestría</span>
+                    </strong>
+                </p>
+                <div class="tooltip fi375" style="margin-top: -1px;">
+                    <span>Nivel de educación mínima que debe tener para inscribirse a este programa. </span>
+                </div>
+                <p class="resultado_general"> Perfil de entrada:
+                    <strong>
+                        <br>
+                        <span>NO APLICA</span>
+                    </strong>
+                </p>
+                <p class="resultado_general"> Horas de Duracion de Curso:
+                    <strong>
+                        <br>
+                        <span>Examen de 30 Minutos</span>
+                    </strong>
+                </p>
+                <p class="resultado_general"> Tipo de programa:
+                    <strong>
+                        <br>
+                        <span>EXAMEN VIRTUAL</span>
+                    </strong>
+                </p>
+                <p class="resultado_general"> Modalidad de formación: <strong> <br>
+                        <div class="gwt-HTML"><img src="assets/images/virt.png" class="tip ml0" width="12"
+                                height="12"><span>EXAMEN VIRTUAL</span></div>
+                    </strong>
+                </p>
+                <hr class="gris">
+                <div>
+                    <p class="resultado_txt_general"> <strong>Descripción del programa: </strong> </p>
+                    <p class="resultado_txt_general"> <span>UNIDAD 1. ¿QUÉ ES LA AUDITORIA?
+                        <br>
+                        <br>UNIDAD 2. DEFINICIÓN Y OBJETIVOS DE LA AUDITORIA
+                        <br>
+                        <br>UNIDAD 3. NORMAS Y MÉTODOS DE AUDITORIA
+                        <br>
+                        <br>UNIDAD 4. FUNDAMENTOS DE AUDITORIA</span></p>
+                </div>
+                <div style="display:block">
+                    <p class="resultado_txt_general"> <strong>Requisitos:</strong> </p>
+                    <p class="resultado_txt_general"> <span>Se requiere que el estudiante AVA tenga dominio de los
+                            elementos básicos relacionados con el manejo de herramientas informáticas y de
+                            comunicación: correo electrónico, chats, Messenger, procesadores de texto, hojas de
+                            cálculo, software para presentaciones, Internet, navegadores y otros sistemas y
+                            herramientas tecnológicas necesarias para la formación virtual</span> </p>
+                </div>
+                <div style="display:block">
+                    <p class="resultado_txt_general"> <strong>Habilidades que desarrolla: </strong> </p>
+                    <p class="resultado_txt_general"> <span>- VERIFICAR LA VULNERABILIDAD DE LA RED CONTRA ATAQUES
+                        DE ACUERDO CON LAS POLÍTICAS DE SEGURIDAD DE LA EMPRESA.</span> </p>
+                </div>  
+            </td>
+            <div class="clearfix"></div>
+        </article>
+    </section>
+    <aside id="sidebar">
+        <div id="nav-blog" class="sidebar-item">
+            <strong>CONTÁCTENOS</strong>
+            <div align="left" >
+                <div>
+                    <img src="assets/images/location.png" class="tip ml0" width="17" height="17">
+                    <span>Sede Centro: carrera 5 n.º 21-38</span>
+                </div>
+                <div>
+                    <img src="assets/images/location.png" class="tip ml0" width="17" height="17">
+                    <span>Sede Norte: calle 75 n.º 16-03</span>
+                </div>
+                <strong>Contact Center </strong>
+                <div>
+                    <img src="assets/images/phone.png" class="tip ml0" width="17" height="17">
+                    <span>326 6826 - 323 9868 - 326 6820</span>
+                </div>
+                <strong>Línea gratuita nacional </strong>
+                <div>
+                    <img src="assets/images/phone.png" class="tip ml0" width="17" height="17">
+                    <span>01 8000 912 534</span>
+                </div>
+                <strong>Solicita información al WhatsApp:</strong>
+                <div>
+                    <img src="assets/images/whatsapp.png" class="tip ml0" width="17" height="17">
+                    <span>+57 3138060450</span>
+                </div>
+            </div>
+        </div>
+        <div id="nav-blog" class="sidebar-item">
+            <strong>¿Desea realizar su pago?</strong>
+            <a [routerLink]="['/RealizaPago']" class="btn btn-success">Realizar Pago</a>
+        </div>
+        <div id="nav-blog" class="sidebar-item">
+            <strong>¿Desea Realizar Este Examen?</strong>
+            <a href="http://localhost:4200/quizauditoria" class="btn btn-success">Realizar Examen </a>
+        </div>
+        <div id="nav-blog" class="sidebar-item">
+            <strong>¿Desea Validar su pago?</strong>
+            <a [routerLink]="['/ValidaPago']" class="btn btn-success">Validar Pago</a>
+        </div>
+    </aside>
+    <div class="clearfix"></div>
+</div>
+<app-footer></app-footer>

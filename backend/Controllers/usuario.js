@@ -14,7 +14,8 @@ var controller = {
         var userpass = req.params.pass;
         if (useruser != "" && userpass != "0") {
             Usuario.find({ usuario: useruser, contrasena: userpass }, (err, usuariofind) => {
-                if (usuariofind != undefined || usuariofind == "0") {
+                var legth = usuariofind.length;
+                if (legth != 0 || legth > 0) {
                     return res.status(200).send({
                         status: 'success',
                         usuario: usuariofind

@@ -18,6 +18,11 @@ import { CursoComponent } from './components/curso/curso.component';
 import { ErrorComponent } from './components/error/error.component';
 import { CursoucComponent } from './components/cursouc/cursouc.component';
 import { SuccessComponent } from './components/success/success.component';
+import { ValidatupagoComponent } from './components/validatupago/validatupago.component';
+import { RealizarpagoComponent } from './components/realizarpago/realizarpago.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { CrearExamenComponent } from './components/crear-examen/crear-examen.component';
+import { ExamenComponent } from './components/examen/examen.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { SuccessComponent } from './components/success/success.component';
     CursoComponent,
     ErrorComponent,
     CursoucComponent,
-    SuccessComponent
+    SuccessComponent,
+    ValidatupagoComponent,
+    RealizarpagoComponent,
+    AdminComponent,
+    CrearExamenComponent,
+    ExamenComponent
   ],
   imports: [
     BrowserModule,

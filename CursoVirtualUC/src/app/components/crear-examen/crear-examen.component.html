@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="center">
+    <div class="center">
+        <section align="center">
+    
+            <h1 class="subheader">Crear Examen</h1>
+    
+            <form class="mid-form" #useriniform="ngForm" (ngSubmit)="onSubmitlog()">
+                <div class="form-group">
+                    <label for="usuario">Nombre de materia</label>
+                    <input type="text" name="usuario" #nombre="ngModel" [(ngModel)]="user.usuario" required />
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Temas de materia</label>
+                    <input type="text" name="contrasena" #correo="ngModel" [(ngModel)]="user.contrasena"/>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="tel">Cantidad de preguntas </label>
+                    <input type="number" name="tel" #tel="ngModel" [(ngModel)]="user.tel" required  minlength="10" maxlength="10" />
+                </div>
+                <a><input type="submit" value="Crear examen" class="btn btn-success" [disabled]="useriniform.invalid" /></a>
+            </form>
+        </section>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -5,20 +5,24 @@
     
             <h1 class="subheader">Inicio de sesión</h1>
     
-            <form class="mid-form" >
+            <form class="mid-form" #useriniform="ngForm" (ngSubmit)="onSubmitlog()">
                 <div class="form-group">
-                    <label for="usuario">Ususario</label>
-                    <input type="text" name="usuario" />
+                    <label for="usuario">Usuario</label>
+                    <input type="text" name="usuario" #nombre="ngModel" [(ngModel)]="user.usuario" required />
                 </div>
-    
+                <small *ngIf="!nombre.valid && nombre.touched">
+                    Usuario no es valido
+                </small>
                 <div class="form-group">
                     <label for="contrasena">Contraseña</label>
-                    <input type="text" name="contrasena" />
+                    <input type="password" name="contrasena" #correo="ngModel" [(ngModel)]="user.contrasena"/>
                 </div>
+                <small *ngIf="!correo.valid && correo.touched">
+                    Nontraseña no es valido
+                </small>
                 <div class="clearfix"></div>
-                <br/>
-                <input type="submit" value="Inicio" class="btn btn-success"/>
-    
+                <br />
+                <a><input type="submit" value="Inicio" class="btn btn-success" [disabled]="useriniform.invalid" /></a>
             </form>
         </section>
         <div class="clearfix"></div>
